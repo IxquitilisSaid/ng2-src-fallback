@@ -4,6 +4,33 @@
   "description": "Angular directive for images fallbacks with the capability of generating On-The-Fly fallbacks",
   "author": "Jaime 'Gondola' Oliveira <jaime.amo18@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IxquitilisSaid/ng2-src-fallback.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IxquitilisSaid/ng2-src-fallback/issues"
+  },
+  "homepage": "https://github.com/IxquitilisSaid/ng2-src-fallback#readme",
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular5",
+    "angular5+",
+	"ng2",
+	"ng2-src",
+	"ng2-src-fallback",
+    "img",
+    "image",
+	"src-fallback",
+    "fallback",
+    "image-fallback",
+	"canvas-to-image",
+	"canvas",
+	"placeholder",
+	"image-placeholder",
+	"img-placeholder"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
