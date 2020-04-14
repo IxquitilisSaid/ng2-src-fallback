@@ -1,16 +1,24 @@
 {
   "name": "ng2-src-fallback",
   "version": "0.0.0",
+  "description": "Angular directive for images fallbacks with the capability of generating On-The-Fly fallbacks",
+  "author": "Jaime 'Gondola' Oliveira <jaime.amo18@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p package.json"
   },
-  "private": true,
-  "dependencies": {
+  "private": false,
+  "peerDependencies": {
+    "@angular/core": ">=5.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
     "@angular/animations": "~9.1.1",
     "@angular/common": "~9.1.1",
     "@angular/compiler": "~9.1.1",
@@ -21,9 +29,7 @@
     "@angular/router": "~9.1.1",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
-  },
-  "devDependencies": {
+    "zone.js": "~0.10.2",
     "@angular-devkit/build-angular": "~0.901.1",
     "@angular/cli": "~9.1.1",
     "@angular/compiler-cli": "~9.1.1",
@@ -40,6 +46,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "^5.4.3",
+    "ng-packagr": "^9.1.1",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "^3.7.5"
