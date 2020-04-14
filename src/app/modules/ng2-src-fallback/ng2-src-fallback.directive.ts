@@ -51,10 +51,20 @@ export class Ng2SrcFallbackDirective implements OnDestroy {
 	private setSrcToFallback() {
 		this._isApplied = true;
 
+		if (this.customFallbackConfig) {
+			this.generateCustomFallback();
+
+			return;
+		}
+
+		this.setFallbackSrc();
+	}
+
+	private setFallbackSrc(isCustom?: boolean) {
 		this.renderer.setAttribute(
 			this._targetImageElement,
 			'src',
-			this.srcFallback
+			isCustom ? this.customFallbackURL : this.srcFallback
 		);
 	}
 
@@ -107,6 +117,8 @@ export class Ng2SrcFallbackDirective implements OnDestroy {
 	private generateFallbackImg(canvas: HTMLCanvasElement) {
 		this.customFallbackURL = canvas
 			.toDataURL(`image/${this.customFallbackConfig?.mimeType}`);
+
+		this.setFallbackSrc(true);
 	}
 
 	private onLoad() {

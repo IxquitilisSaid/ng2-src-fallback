@@ -1,9 +1,11 @@
 <p>
 	<img
 		src="brokenLlalalalalal"
-		srcFallback="workingPlaceholder">
+		ng2-src-fallback
+		srcFallback="{{fallbackImgURL}}">
 
-	<canvas #canvas id="canvas"></canvas>
-
-	<img *ngIf="fallbackImgURL" src="{{fallbackImgURL}}">
+	<img
+		src="brokenLlalalalalal"
+		ng2-src-fallback
+		[customFallbackConfig]="customFallbackConfig">
 </p>
