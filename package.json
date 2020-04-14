@@ -50,5 +50,11 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "^3.7.5"
+  },
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
   }
 }
