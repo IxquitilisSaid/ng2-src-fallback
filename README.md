@@ -148,7 +148,7 @@ and then bind it to the `wasLoaded` event
 <img
 	src="a_cat.png"
 	ng2-src-fallback
-	srcFallback="{{picture2.png}}"
+	[srcFallback]="picture2.png"
 	(wasLoaded)="onLoaded($event)">
 ```
 
