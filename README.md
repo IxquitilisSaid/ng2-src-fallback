@@ -4,8 +4,8 @@ An Angular directive that substitutes the primary image with a fallback should i
 
 ## Features
 
-- Default fallback - If at first you don't succeed, provide a fallback image to ```srcFallback``` input
-- On-The-Fly Fallback creation - If for some reason you don't have an image to set as fallback, check the [customFallbackConfig](#customFallbackConfig)
+- Default fallback - If at first you don't succeed, provide a fallback image to ```[srcFallback]``` input
+- On-The-Fly Fallback creation - If for some reason you don't have an image to set as fallback, check the [[customFallbackConfig]](#customFallbackConfig)
 
 ## Install
 
@@ -56,20 +56,23 @@ export class AppComponent {
 
 ```
 
-## `customFallbackConfig`
+## `[customFallbackConfig]`
 
 Let's say, for some reason, you don't have an image you can use as fallback. Instead of providing a value to the ```[srcFallback]``` input, you can use the ```[customFallbackConfig]``` to generate 'On-The-Fly' custom placeholder images.
 
 ### `ICustomFallbackConfig`
-- height (obligatory) - Height of the generated Image (String containing the numeric value and CSS unit);
-- width (obligatory) - Width of the generated Image (String containing the numeric value and CSS unit);
-- bgColour (optional) - Background colour of the generated Image (String);
-- textSizeAndFont (optional) - Styling of the Text inside the generated Image (String, same syntax as CSS ```font``` property);
-- textColour (optional) - Colour of the Text inside the generated Image (String);
-- textContent (optional) - The text you want to display inside the generated Image (String);
-- textAlign (optional) - The alignment of the text you want to display inside the generated Image (String: CanvasTextAlign);
-- textBaseline (optional) - The Baseline alignment of the text you want to display inside the generated Image (String: CanvasTextBaseline);
-- mimeType (optional) - The mime type of the generated Image (String: 'jpeg' | 'png');
+
+| Name                 | Type                     | Required                | Description                                                                                                                                                      |
+|----------------------|:-----------------------------------:|:-------------------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| height             | String (numeric value and CSS unit)                      | yes               | Height of the generated Image      |
+| width                 | String (numeric value and CSS unit)                         | yes               | Width of the generated Image                                                                                                                 |
+| bgColour                | String                     | no               | Background colour of the generated Image (String)                                                                                                                |
+| textSizeAndFont        | String (CSS ```font``` property syntax)                                | no               | Styling of the Text inside the generated Image                                                                                      |
+| textColour            | String                                | no               | Colour of the Text inside the generated Image                                                                                        |
+| textContent           | String                                | no              | The text you want to display inside the generated Image                                                                                       |
+| textAlign             | `CanvasTextAlign`                     | no               | The alignment of the text you want to display inside the generated Image
+| textBaseline             | `CanvasTextBaseline`                    | no               | The Baseline alignment of the text you want to display inside the generated Image
+| mimeType             | String: 'jpeg' \| 'png'                     | no               | The mime type of the generated Image
 
 ### Usage
 
@@ -148,8 +151,8 @@ and then bind it to the `wasLoaded` event
 <img
 	src="a_cat.png"
 	ng2-src-fallback
-	[srcFallback]="picture2.png"
-	(wasLoaded)="onLoaded($event)">
+	[srcFallback]="'picture2.png'"
+	(wasLoaded)="wasLoaded($event)">
 ```
 
 ### License
