@@ -1,5 +1,5 @@
 {
-	"name": "ng2-src-fallback",
+	"name": "@ixquitilissaid/ng2-src-fallback",
 	"version": "1.0.4",
 	"description": "Angular directive for images fallbacks with the capability of generating On-The-Fly fallbacks",
 	"author": "Jaime 'Gondola' Oliveira <jaime.amo18@gmail.com>",
